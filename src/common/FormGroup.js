@@ -1,10 +1,15 @@
 import React from 'react'
 
 const FormGroup = ({children, text}) => {
+
+    const words = text.split(" ")
+
     return (
         <div className="form-group">
             <label htmlFor={text}>
-            {text.slice(0,1).toUpperCase() + text.slice(1,text.length)}
+                {words.map((word) => {
+                    return word[0].toUpperCase() + word.substring(1)
+                }).join(" ")}
             </label>
             {children}
         </div>
