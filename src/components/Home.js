@@ -17,6 +17,10 @@ const Home = (props) => {
     
     return (
         <div className="container">
+            <h1>let's sign up!</h1>
+            <div className="sub-text">
+                Use the form below to sign up for this super awesome service. You're only a few steps away!
+            </div>
             <Form>
                 {/* first name */}
                 <FormGroup text="username">
@@ -45,7 +49,7 @@ const Home = (props) => {
                     />
                 </FormGroup>
 
-                <button>sign up</button>
+                <button>Sign Up</button>
             </Form>
         </div>
     )
