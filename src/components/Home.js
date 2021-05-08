@@ -50,8 +50,50 @@ const vpassword = (value) => {
     }
 }
 
+const validate = {
+    firstname: vfirstname,
+    email: vemail,
+    password: vpassword,
+}
 
 const Home = (props) => {
+
+    const form = useRef();
+    const checkBtn = useRef();
+
+    const [firstname, setFirstname] = useState("");
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [successful, setSuccessful] = useState(false);
+    const [message, setMessage] = useState("");
+    const [errors, setErrors] = useState({})
+
+    // stores firstname in firstname state
+    const onChangeFirstname = (e) => {
+        const firstname = e.target.value
+        setFirstname(firstname)
+    }
+
+    // stores email in email state
+    const onChangeEmail = (e) => {
+        const email = e.target.value
+        setEmail(email)
+    }
+
+    // stores password in password state
+    const onChangePassword = (e) => {
+        const password = e.target.value
+        setPassword(password)
+    }
+
+
+    // handle signup and prevent default
+    const handleSignup = (e) => {
+        e.preventDefault()
+        validate()
+
+        setSuccessful(false)
+    }
 
     return (
         <div className="container">
@@ -60,14 +102,17 @@ const Home = (props) => {
             <div className="sub-text">
                 Use the form below to sign up for this super awesome service. You're only a few steps away!
             </div>
-            <Form>
+            <Form onSubmit={handleSignup} autoComplete="off">
                 {/* first name */}
                 <FormGroup text="first name">
                     <Input
                         type="text"
                         className="form-control"
                         name="firstname"
-                        validations={[required]}
+                        value={firstname}
+                        onChange={onChangeFirstname}
+                        validations={[vfirstname]}
+                        required
                     />
                 </FormGroup>
 
@@ -77,6 +122,9 @@ const Home = (props) => {
                         type="text"
                         className="form-control"
                         name="email"
+                        value={email}
+                        onChange={onChangeEmail}
+                        validations={[required, vemail]}
                     />
                 </FormGroup>
 
@@ -86,12 +134,17 @@ const Home = (props) => {
                         type="password"
                         className="form-control"
                         name="password"
+                        value={password}
+                        onChange={onChangePassword}
+                        validations={[required, vpassword]}
                     />
                 </FormGroup>
 
                 <Link to="/confirmation">
                     <button>Sign Up</button>
                 </Link>
+
+                {/* <CheckButton style={{ display: "none" }} ref={checkBtn} /> */}
 
             </Form>
         </div>
