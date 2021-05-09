@@ -19,3 +19,9 @@
 
 * Form input validation
 * Accessibility
+
+### Log
+
+* Created forms
+* Form works and will not allow submission if fields are blank (no input validation yet though)
+* Submitting form will redirect to the confirmation page

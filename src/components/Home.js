@@ -1,8 +1,8 @@
-import React, { useState, useRef } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+// import { Link } from 'react-router-dom';
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
-import CheckButton from "react-validation/build/button"
+// import CheckButton from "react-validation/build/button"
 import { isEmail } from "validator";
 import FormGroup from '../common/FormGroup';
 
@@ -50,23 +50,23 @@ const vpassword = (value) => {
     }
 }
 
-const validate = {
-    firstname: vfirstname,
-    email: vemail,
-    password: vpassword,
-}
+// const validate = {
+//     firstname: vfirstname,
+//     email: vemail,
+//     password: vpassword,
+// }
 
 const Home = (props) => {
 
-    const form = useRef();
-    const checkBtn = useRef();
+    // const form = useRef();
+    // const checkBtn = useRef();
 
     const [firstname, setFirstname] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    const [successful, setSuccessful] = useState(false);
-    const [message, setMessage] = useState("");
-    const [errors, setErrors] = useState({})
+    // const [successful, setSuccessful] = useState(false);
+    // const [message, setMessage] = useState("");
+    // const [errors, setErrors] = useState({})
 
     // stores firstname in firstname state
     const onChangeFirstname = (e) => {
@@ -90,36 +90,33 @@ const Home = (props) => {
     // handle signup and prevent default
     const handleSignup = (e) => {
         e.preventDefault()
-        validate()
-
-        setSuccessful(false)
+        props.history.push('/confirmation')
     }
 
     return (
         <div className="container">
+
             <h1>Let's</h1>
             <h1 className="bold-heading">Sign Up</h1>
             <div className="sub-text">
                 Use the form below to sign up for this super awesome service. You're only a few steps away!
             </div>
             <Form onSubmit={handleSignup} autoComplete="off">
-                {/* first name */}
+                
                 <FormGroup text="first name">
                     <Input
-                        type="text"
+                        type="text" required
                         className="form-control"
                         name="firstname"
                         value={firstname}
                         onChange={onChangeFirstname}
                         validations={[vfirstname]}
-                        required
                     />
                 </FormGroup>
 
-                {/* email */}
                 <FormGroup text="email address">
                     <Input
-                        type="text"
+                        type="text" required
                         className="form-control"
                         name="email"
                         value={email}
@@ -128,10 +125,9 @@ const Home = (props) => {
                     />
                 </FormGroup>
 
-                {/* password */}
                 <FormGroup text="password">
                     <Input
-                        type="password"
+                        type="password" required
                         className="form-control"
                         name="password"
                         value={password}
@@ -140,11 +136,9 @@ const Home = (props) => {
                     />
                 </FormGroup>
 
-                <Link to="/confirmation">
+                {/* <Link to="/confirmation"> */}
                     <button>Sign Up</button>
-                </Link>
-
-                {/* <CheckButton style={{ display: "none" }} ref={checkBtn} /> */}
+                {/* </Link> */}
 
             </Form>
         </div>
