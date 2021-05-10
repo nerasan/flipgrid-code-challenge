@@ -90,7 +90,12 @@ const Home = (props) => {
     // handle signup and prevent default
     const handleSignup = (e) => {
         e.preventDefault()
-        props.history.push('/confirmation')
+        console.log(firstname)
+        console.log(email)
+        props.history.push({
+            pathname: "/confirmation",
+            state: firstname
+        })
     }
 
     return (
