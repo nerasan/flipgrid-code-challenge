@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
 import Form from "react-validation/build/form";
 import Input from "react-validation/build/input";
-// import CheckButton from "react-validation/build/button"
 import { isEmail } from "validator";
 import FormGroup from '../common/FormGroup';
 
@@ -50,23 +48,11 @@ const vpassword = (value) => {
     }
 }
 
-// const validate = {
-//     firstname: vfirstname,
-//     email: vemail,
-//     password: vpassword,
-// }
-
 const Home = (props) => {
-
-    // const form = useRef();
-    // const checkBtn = useRef();
 
     const [firstname, setFirstname] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    // const [successful, setSuccessful] = useState(false);
-    // const [message, setMessage] = useState("");
-    // const [errors, setErrors] = useState({})
 
     // stores firstname in firstname state
     const onChangeFirstname = (e) => {
@@ -86,12 +72,9 @@ const Home = (props) => {
         setPassword(password)
     }
 
-
-    // handle signup and prevent default
+    // handle signup and redirect to confirmation page
     const handleSignup = (e) => {
         e.preventDefault()
-        console.log(firstname)
-        console.log(email)
         props.history.push({
             pathname: "/confirmation",
             state: [ firstname, email ]
@@ -145,6 +128,7 @@ const Home = (props) => {
                                 validations={[required, vpassword]}
                             />
                         </FormGroup>
+
                         <div className="button-div">
                             <button>Sign Up</button>
                         </div>
@@ -153,7 +137,6 @@ const Home = (props) => {
             </div>
         </div>
     )
-
 }
 
 export default Home;

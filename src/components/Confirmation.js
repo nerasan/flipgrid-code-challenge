@@ -5,7 +5,6 @@ const Confirmation = (props) => {
     const data = props.location.state
     const firstname = data[0]
     const email = data[1]
-
     
     return (
         <div className="wrapper">
@@ -32,7 +31,6 @@ const Confirmation = (props) => {
             </div>
         </div>
     )
-
 }
 
 export default Confirmation;
