@@ -94,53 +94,58 @@ const Home = (props) => {
     }
 
     return (
-        <div className="container">
-
-            <h1>Let's</h1>
-            <h1 className="bold-heading">Sign Up</h1>
-            <div className="sub-text">
-                Use the form below to sign up for this super awesome service. You're only a few steps away!
-            </div>
-            <Form onSubmit={handleSignup} autoComplete="off">
+        <div className="wrapper">
+            <div className="container">
                 
-                <FormGroup text="first name">
-                    <Input
-                        type="text" required
-                        className="form-control"
-                        name="firstname"
-                        value={firstname}
-                        onChange={onChangeFirstname}
-                        validations={[vfirstname]}
-                    />
-                </FormGroup>
+                <div className="sub-section">
+                    <h1 className="light-heading">Let's</h1>
+                    <h1>Sign Up</h1>
+                </div>
 
-                <FormGroup text="email address">
-                    <Input
-                        type="text" required
-                        className="form-control"
-                        name="email"
-                        value={email}
-                        onChange={onChangeEmail}
-                        validations={[required, vemail]}
-                    />
-                </FormGroup>
+                <div className="sub-section">
+                    Use the form below to sign up for this super awesome service. You're only a few steps away!
+                </div>
 
-                <FormGroup text="password">
-                    <Input
-                        type="password" required
-                        className="form-control"
-                        name="password"
-                        value={password}
-                        onChange={onChangePassword}
-                        validations={[required, vpassword]}
-                    />
-                </FormGroup>
+                    <Form onSubmit={handleSignup} autoComplete="off">
+                        
+                        <FormGroup text="first name">
+                            <Input
+                                type="text" required
+                                className="form-control"
+                                name="firstname"
+                                value={firstname}
+                                onChange={onChangeFirstname}
+                                validations={[vfirstname]}
+                            />
+                        </FormGroup>
 
-                {/* <Link to="/confirmation"> */}
-                    <button>Sign Up</button>
-                {/* </Link> */}
+                        <FormGroup text="email address">
+                            <Input
+                                type="text" required
+                                className="form-control"
+                                name="email"
+                                value={email}
+                                onChange={onChangeEmail}
+                                validations={[required, vemail]}
+                            />
+                        </FormGroup>
 
-            </Form>
+                        <FormGroup text="password">
+                            <Input
+                                type="password" required
+                                className="form-control"
+                                name="password"
+                                value={password}
+                                onChange={onChangePassword}
+                                validations={[required, vpassword]}
+                            />
+                        </FormGroup>
+                        <div className="button-div">
+                            <button>Sign Up</button>
+                        </div>
+ 
+                    </Form>
+            </div>
         </div>
     )
 
