@@ -3,18 +3,13 @@ import React from 'react'
 const Confirmation = (props) => {
 
     const data = props.location.state
-    const firstname = data.firstname
-    const email = data.email
+    const firstname = data[0]
+    const email = data[1]
 
     
     return (
         <div className="wrapper">
             <div className="container">
-
-                example of data
-                <div>
-                    {data}
-                </div>
 
                 <div className="sub-section">
                     <h1 className="light-heading">Welcome,</h1>

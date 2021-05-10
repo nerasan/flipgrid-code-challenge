@@ -94,7 +94,7 @@ const Home = (props) => {
         console.log(email)
         props.history.push({
             pathname: "/confirmation",
-            state: firstname
+            state: [ firstname, email ]
         })
     }
 
