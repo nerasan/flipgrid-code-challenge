@@ -7,7 +7,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={'/flipgrid-code-challenge/'}>
     <App />
   </BrowserRouter>,
   document.getElementById('root')
