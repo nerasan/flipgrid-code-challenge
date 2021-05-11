@@ -2,7 +2,7 @@
   "name": "flipgrid-code-challenge",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/nerasan/flipgrid-code-challenge",
+  "homepage": "https://nerasan.github.io/flipgrid-code-challenge/",
   "dependencies": {
     "-": "0.0.1",
     "@testing-library/jest-dom": "^5.12.0",
