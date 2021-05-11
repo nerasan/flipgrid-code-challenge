@@ -4,7 +4,7 @@ import Input from "react-validation/build/input";
 import { isEmail } from "validator";
 import FormGroup from '../common/FormGroup';
 
-// function to validate required field -- need to have the button prevent submission if this is blank
+// function to validate required field
 const required = (value) => {
     if (!value) {
         return (
@@ -26,7 +26,7 @@ const vfirstname = (value) => {
     }
 }
 
-// function that checks is email
+// function that validates email
 const vemail = (value) => {
     if(!isEmail(value)) {
         return (

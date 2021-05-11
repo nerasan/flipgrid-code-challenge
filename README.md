@@ -1,28 +1,25 @@
 # Flipgrid Challenge
 
-## Planning
+## Installation Instructions
 
-### Homepage - Sign Up Page
+* Fork and clone this repo.
+* Run `npm i` to install all dependencies.
+* Start the app using `npm start`.
 
-* Header
-* Help text
-* Form (First Name, Email, Password) - all required 
-* Submit button
+## Technologies Used
 
-### Page 2 - Confirmation 
+* React
+* React Router
+* React Validation
+* Validator
 
-* Confirmation message
-* Pulls their first name and email
-* Sign in button (no functionality)
+## General Approach
 
-### Additional
+We wanted to create an app that is simple to navigate and allows users to create an account. Our main focus for the app is to have it look clean and appealing for all users. In order to achieve our goal and meet the user stories, React was the ideal library to use. It has reusable components and also allows the use of Router for navigating between pages of your app.
 
-* Form input validation
-* Accessibility
+## User Stories
 
-### Log
-
-* Created forms
-* Form works and will not allow submission if fields are blank (no input validation yet though)
-* Submitting form will redirect to the confirmation page
-* Styling complete!
+* As a user, I would like to create an account.
+* As a user, I would like the app to tell me if my inputs are invalid or does not meet the requirements.
+* As a user, I would like the app to confirm my first name and email inputs in the confirmation page.
+* As a user, I would like the form to dynamically adjust when my screen size changes.
