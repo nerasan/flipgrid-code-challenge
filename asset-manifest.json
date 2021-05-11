@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/nerasan/flipgrid-code-challenge/static/css/main.5fc66ba8.chunk.css",
+    "main.js": "/nerasan/flipgrid-code-challenge/static/js/main.11e2bd0a.chunk.js",
+    "main.js.map": "/nerasan/flipgrid-code-challenge/static/js/main.11e2bd0a.chunk.js.map",
+    "runtime-main.js": "/nerasan/flipgrid-code-challenge/static/js/runtime-main.c31f2416.js",
+    "runtime-main.js.map": "/nerasan/flipgrid-code-challenge/static/js/runtime-main.c31f2416.js.map",
+    "static/js/2.85cade14.chunk.js": "/nerasan/flipgrid-code-challenge/static/js/2.85cade14.chunk.js",
+    "static/js/2.85cade14.chunk.js.map": "/nerasan/flipgrid-code-challenge/static/js/2.85cade14.chunk.js.map",
+    "static/js/3.ee04ff0a.chunk.js": "/nerasan/flipgrid-code-challenge/static/js/3.ee04ff0a.chunk.js",
+    "static/js/3.ee04ff0a.chunk.js.map": "/nerasan/flipgrid-code-challenge/static/js/3.ee04ff0a.chunk.js.map",
+    "index.html": "/nerasan/flipgrid-code-challenge/index.html",
+    "static/css/main.5fc66ba8.chunk.css.map": "/nerasan/flipgrid-code-challenge/static/css/main.5fc66ba8.chunk.css.map",
+    "static/js/2.85cade14.chunk.js.LICENSE.txt": "/nerasan/flipgrid-code-challenge/static/js/2.85cade14.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.c31f2416.js",
+    "static/js/2.85cade14.chunk.js",
+    "static/css/main.5fc66ba8.chunk.css",
+    "static/js/main.11e2bd0a.chunk.js"
+  ]
+}
